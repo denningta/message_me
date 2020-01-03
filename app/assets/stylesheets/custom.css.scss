@@ -1,0 +1,14 @@
+.vertical-center {
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.no-link-style {
+    text-decoration: none;
+    color: inherit;
+}
+
+.no-link-style:hover {
+    color: inherit;
+}
