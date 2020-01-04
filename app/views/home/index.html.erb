@@ -1,3 +1,41 @@
-<h1>Home Page</h1>
+<h4 class="ui center aligned medium icon header">
+  <i class="circular blue coffee icon"></i>
+  Say Something
+</h4>
 
-<%= link_to "Sign Out", destroy_model_session_path, method: :delete %>
+<div class="ui two column grid">
+    <div class="twelve wide column">
+        <div class="ui fluid card chatbox">
+          <div class="scrollable content">
+            <%= render 'content' %>
+          </div>
+        </div>
+        <div class="ui fluid large transparent left icon input">
+          <i class="heart outline icon"></i>
+          <input type="text" placeholder="Say something...">
+        </div>
+    </div>
+
+
+    <div class="four wide column">
+        <div class="ui secondary vertical menu">
+          <a class="active item">
+            Account
+          </a>
+          <a class="item">
+            Settings
+          </a>
+          <div class="ui dropdown item">
+            <i class="dropdown icon"></i>
+            Display Options
+            <div class="menu">
+              <div class="header">Text Size</div>
+              <a class="item">Small</a>
+              <a class="item">Medium</a>
+              <a class="item">Large</a>
+            </div>
+          </div>
+        </div>
+    </div>
+
+</div>

@@ -13,3 +13,13 @@
 .no-link-style:hover {
     color: inherit;
 }
+
+.chatbox {
+    height: 50vh;
+}
+
+.scrollable {
+    overflow-x: hidden; 
+    overflow-y: auto;
+    padding: 20px;
+}
