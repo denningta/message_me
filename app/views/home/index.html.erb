@@ -5,14 +5,27 @@
 
 <div class="ui two column grid">
     <div class="twelve wide column">
-        <div class="ui fluid card chatbox">
+        <div class="ui fluid raised card chatbox">
           <div class="scrollable content">
             <%= render 'content' %>
           </div>
-        </div>
-        <div class="ui fluid large transparent left icon input">
-          <i class="heart outline icon"></i>
-          <input type="text" placeholder="Say something...">
+          <div class="extra content">
+            <form class="ui reply form">
+                <div class="field">
+                    <div class="ui large transparent left icon input">
+                        <i class="heart outline icon"></i>
+                        <input type="text" placeholder="Say something...">
+                        <div class="ui blue submit icon button">
+                            <i class="icon paper plane"></i>
+                        </div>
+                    </div>
+                </div>
+            </form>
+<!--             <div class="ui large transparent left icon input">
+              <i class="heart outline icon"></i>
+              <input type="text" placeholder="Say something...">
+            </div> -->
+          </div> 
         </div>
     </div>
 
