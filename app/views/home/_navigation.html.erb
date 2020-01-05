@@ -11,12 +11,9 @@
             Account <i class="dropdown icon"></i>
             <div class="menu">
                 <a class="item">Log out</a>
-                <%= link_to "Log in", new_model_session_path, class: "item" %>
-                <a class="item">Sign up</a>
+                <%= link_to "Log in", log_in_path, class: "item" %>
+                <%= link_to "Sign up", sign_up_path, class: "item" %>
             </div>
-        </div>
-        <div class="item">
-                <%= link_to "Sign Up", new_model_registration_path, class: "ui primary button" %>
         </div>
     </div>
 </div>
