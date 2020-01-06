@@ -5,6 +5,7 @@ ruby '2.5.1'
 
 # Authentication Platform
 gem 'devise'
+gem 'hirb'
 gem 'semantic-ui-sass', github: 'doabit/semantic-ui-sass'
 gem 'jquery-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

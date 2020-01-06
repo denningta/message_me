@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
     root to: "home#index"
 
+    get 'landing_page', to: 'home#landing_page'
+
     get 'sign_up', to: 'users#new'
     resources :users, except: [:new]
 

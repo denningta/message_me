@@ -1,23 +1,12 @@
 <div class="ui feed">
-  <div class="event">
-    <div class="content">
-      <div class="summary">
-        <em>Tim Denning</em>: Test message
-      </div>
-    </div>
-  </div>
+  <% @messages.each do |message| %>
     <div class="event">
-    <div class="content">
-      <div class="summary">
-        <em>Tim Denning</em>: Test message
+      <div class="content">
+        <div class="xummary">
+          <em><%= message.user.email %></em>: <%= message.body %>
+        </div>
       </div>
     </div>
-  </div>
-    <div class="event">
-    <div class="content">
-      <div class="summary">
-        <em>Tim Denning</em>: Test message
-      </div>
-    </div>
-  </div>
+  <% end %>
 </div>
+  

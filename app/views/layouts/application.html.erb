@@ -14,8 +14,8 @@
   <body>
     <%= render 'home/navigation' %>
     <div class="ui container">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+      <%= render 'layouts/messages' %>
+
       <%= yield %>
     </div>
   </body>
