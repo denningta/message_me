@@ -6,21 +6,24 @@
 <div class="ui two column grid">
     <div class="twelve wide column">
         <div class="ui fluid raised card chatbox">
-          <div class="scrollable content">
-            <%= render 'content' %>
+          <div class="content" id="messages">
+            <div class="ui feed" id="message-container">
+              <%= render @messages %>
+            </div>
           </div>
           <div class="extra content">
-            <form class="ui reply form">
+            <!-- <form class="ui reply form"> -->
+            <%= form_for(@message, html: { class: "ui reply form", role: "form" }, url: message_path, remote: true) do |f| %>
                 <div class="field">
                     <div class="ui large transparent left icon input">
                         <i class="heart outline icon"></i>
-                        <input type="text" placeholder="Say something...">
-                        <div class="ui gray submit icon button">
-                            <i class="icon paper plane"></i>
-                        </div>
+                        <!-- <input type="text" placeholder="Say something..."> -->
+                        <%= f.text_field :body, placeholder: "Say something...", autocomplete: "off" %>
+                        <%= f.button '<i class="icon paper plane"></i>'.html_safe, class: "ui gray submit icon button" %>
                     </div>
                 </div>
-            </form>
+            <% end %>
+            <!-- </form> -->
           </div> 
         </div>
     </div>
