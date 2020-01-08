@@ -24,6 +24,18 @@ scroll_bottom = function() {
     }
 }
 
+submit_message = function() {
+    $('#message_body').on('keydown', function(e) {
+        if (e.keyCode == 13) {
+            $('button').click();
+            // something is going on here.  I think enter is clicking the button based on tab index.
+            // This function gets called on key press Enter but it isn't sending the data to the view
+            // before clearing the input value
+            e.target.value = "";
+        };
+    });
+};
+
 $(document).on('turbolinks:load', function() {
     $('.ui.dropdown').dropdown();
     $(".close.icon").click(function(){
@@ -31,7 +43,8 @@ $(document).on('turbolinks:load', function() {
         .parent()
         .transition('fade');
     });
-    scroll_bottom()
+    submit_message();
+    scroll_bottom();
 })
 
 

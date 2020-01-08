@@ -19,7 +19,7 @@
                         <i class="heart outline icon"></i>
                         <!-- <input type="text" placeholder="Say something..."> -->
                         <%= f.text_field :body, placeholder: "Say something...", autocomplete: "off" %>
-                        <%= f.button '<i class="icon paper plane"></i>'.html_safe, class: "ui gray submit icon button" %>
+                        <%= f.button '<i class="icon paper plane"></i>'.html_safe, class: "ui gray submit icon button", id: "submit_button" %>
                     </div>
                 </div>
             <% end %>
